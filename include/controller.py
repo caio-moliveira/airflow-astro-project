@@ -6,7 +6,7 @@ from random import randint
 
 Base.metadata.create_all(bind=engine)
 
-def generate_random_number():
+def gerar_numero_aleatorio():
     return randint(1, 350)
 
 def fetch_pokemon_data(pokemon_id: int):
