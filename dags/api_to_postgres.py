@@ -1,11 +1,13 @@
-from include.controller import gerar_numero_aleatorio, add_pokemon_to_db, fetch_pokemon_data
 from airflow.decorators import task, dag
+
+from include.controller import gerar_numero_aleatorio, fetch_pokemon_data, add_pokemon_to_db
+
 from datetime import datetime
 
 
 @dag(dag_id="api_postgres",
      description="pipeline_para_capturar_pokemon",
-     start_date=datetime(2024,11,12),
+     start_date=datetime(2024,3,24),
      schedule="* * * * *",
      catchup=False)
 def api_postgres():
