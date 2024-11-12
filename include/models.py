@@ -7,4 +7,4 @@ class Pokemon(Base):
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String)
     type = Column(String)
-    created_at = Column(DateTime, default=func.now())  # Campo adicionado
+    created_at = Column(DateTime, default=func.now())
