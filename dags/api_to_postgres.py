@@ -5,7 +5,7 @@ from datetime import datetime
 
 @dag(dag_id="api_postgres",
      description="pipeline_para_capturar_pokemon",
-     start_date=datetime(2024,3,24),
+     start_date=datetime(2024,11,12),
      schedule="* * * * *",
      catchup=False)
 def api_postgres():
