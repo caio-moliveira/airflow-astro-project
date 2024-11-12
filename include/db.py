@@ -6,7 +6,18 @@ import os
 
 load_dotenv()
 
-SQLALCHEMY_DATABASE_URL = os.getenv("URLPOSTGRES")
-engine = create_engine(SQLALCHEMY_DATABASE_URL)
+# PostgreSQL configuration
+POSTGRES_USER = os.getenv("POSTGRES_USER")  
+POSTGRES_PASSWORD = os.getenv("POSTGRES_PASSWORD")
+POSTGRES_HOST = os.getenv("POSTGRES_HOST")
+POSTGRES_DB = os.getenv("POSTGRES_DB")
+
+# Create a connection string
+db_url = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432/{POSTGRES_DB}"
+
+# Initialize database engine
+engine = create_engine(db_url)
+Base = declarative_base()
+# Configurar a sessão do SQLAlchemy
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
