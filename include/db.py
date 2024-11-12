@@ -6,7 +6,7 @@ import os
 
 load_dotenv()
 
-SQLALCHEMY_DATABASE_URL = f"postgresql+psycopg2://postgres:postgres@localhost:5432/pokemon_db"
+SQLALCHEMY_DATABASE_URL = os.getenv("URLPOSTGRES")
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
