@@ -12,6 +12,7 @@ apache-airflow = "^2.10.3"
 python-dotenv = "^1.0.1"
 pydantic = "^2.9.2"
 apache-airflow-providers-postgres = "^5.13.1"
+psycopg2-binary = "^2.9.10"
 
 
 [build-system]
