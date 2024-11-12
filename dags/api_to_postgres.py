@@ -1,6 +1,6 @@
 from airflow.decorators import task, dag
 
-from include.controller import generate_random_number, fetch_pokemon_data, add_pokemon_to_db
+from include.controller import fetch_pokemon_data, add_pokemon_to_db, generate_random_number
 
 from datetime import datetime
 
