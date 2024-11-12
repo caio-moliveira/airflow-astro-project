@@ -17,7 +17,6 @@ db_url = f"postgresql://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}:5432
 
 # Initialize database engine
 engine = create_engine(db_url)
-Base = declarative_base()
 # Configurar a sessão do SQLAlchemy
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
